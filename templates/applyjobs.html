@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Jobs</title>
+    <style>
+        /* Custom CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center align content horizontally */
+        }
+        h1 {
+            text-align: center; /* Center align the header */
+        }
+        .jobs-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            max-width: 1200px; /* Set maximum width for the job listings */
+            justify-content: center; /* Center align job listings */
+            margin-top: 20px; /* Space between header and job listings */
+        }
+        .job-listing {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 15px;
+            width: calc(50% - 20px); /* Two-column layout with gap */
+            max-width: 500px; /* Maximum width for each job listing */
+            box-sizing: border-box; /* Include padding in width calculation */
+        }
+        .job-listing h2 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+        .job-listing p {
+            margin: 5px 0;
+        }
+        .apply-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        .apply-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Available Jobs</h1>
+
+    <!-- Container for job listings -->
+    <div class="jobs-container">
+
+        <!-- Example job listings -->
+        <div class="job-listing">
+            <h2>Harvesting</h2>
+            <p>Location: Rural area near Berlin</p>
+            <p>Wages per hour: €10</p>
+            <p>Duration: 8 hours</p>
+            <button class="apply-button" onclick="applyForJob('Harvesting')">Apply</button>
+        </div>
+
+        <div class="job-listing">
+            <h2>Ploughing</h2>
+            <p>Location: Rural area near Berlin</p>
+            <p>Wages per hour: €12</p>
+            <p>Duration: 6 hours</p>
+            <button class="apply-button" onclick="applyForJob('Ploughing')">Apply</button>
+        </div>
+
+        <div class="job-listing">
+            <h2>Sowing</h2>
+            <p>Location: Rural area near Berlin</p>
+            <p>Wages per hour: €11</p>
+            <p>Duration: 7 hours</p>
+            <button class="apply-button" onclick="applyForJob('Sowing')">Apply</button>
+        </div>
+
+        <div class="job-listing">
+            <h2>Manuring</h2>
+            <p>Location: Rural area near Berlin</p>
+            <p>Wages per hour: €10</p>
+            <p>Duration: 8 hours</p>
+            <button class="apply-button" onclick="applyForJob('Manuring')">Apply</button>
+        </div>
+
+        <div class="job-listing">
+            <h2>Irrigation</h2>
+            <p>Location: Rural area near Berlin</p>
+            <p>Wages per hour: €12</p>
+            <p>Duration: 6 hours</p>
+            <button class="apply-button" onclick="applyForJob('Irrigation')">Apply</button>
+        </div>
+
+        <div class="job-listing">
+            <h2>Weeding</h2>
+            <p>Location: Rural area near Berlin</p>
+            <p>Wages per hour: €11</p>
+            <p>Duration: 12 hours</p>
+            <button class="apply-button" onclick="applyForJob('Weeding')">Apply</button>
+        </div>
+
+        <div class="job-listing">
+            <h2>Clerk</h2>
+            <p>Location: Rural area near Berlin</p>
+            <p>Wages per hour: €13</p>
+            <p>Duration: 5 hours</p>
+            <button class="apply-button" onclick="applyForJob('Clerk')">Apply</button>
+        </div>
+
+        <div class="job-listing">
+            <h2>Warehouse Loader</h2>
+            <p>Location: Rural area near Berlin</p>
+            <p>Wages per hour: €14</p>
+            <p>Duration: 4 hours</p>
+            <button class="apply-button" onclick="applyForJob('Warehouse Loader')">Apply</button>
+        </div>
+
+        <div class="job-listing">
+            <h2>Field Supervisor</h2>
+            <p>Location: Rural area near Berlin</p>
+            <p>Wages per hour: €15</p>
+            <p>Duration: 4 hours</p>
+            <button class="apply-button" onclick="applyForJob('Field Supervisor')">Apply</button>
+        </div>
+
+        <div class="job-listing">
+            <h2>Equipment Operator</h2>
+            <p>Location: Rural area near Berlin</p>
+            <p>Wages per hour: €13</p>
+            <p>Duration: 6 hours</p>
+            <button class="apply-button" onclick="applyForJob('Equipment Operator')">Apply</button>
+        </div>
+
+    </div>
+
+    <!-- Additional message -->
+    <p style="text-align: center;"><strong>Note:</strong> Details will be sent to you on your registered mobile number after applying.</p>
+
+    <script>
+        // Function to simulate applying for a job
+        function applyForJob(jobTitle) {
+            alert('You have applied for the job: ' + jobTitle + '. Details will be sent to your registered mobile number.');
+            // Implement actual logic to apply for the job via backend/API
+            // This function can be expanded to interact with backend services
+            // to handle job application, update user profile, etc.
+        }
+    </script>
+</body>
+</html>

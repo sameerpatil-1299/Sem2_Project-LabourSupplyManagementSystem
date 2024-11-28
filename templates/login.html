@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en"
+<head>
+    
+<title>Labor Supply Management System</title>
+  {% load static %}
+   <link rel="stylesheet" type="text/css" href="{% static 'styles2.css' %}">
+</head>
+<header>
+    <h1>Labor Supply Management System</h1>
+    <a href="{% url 'home' %}">
+      <div class="Logo">
+      <img src="{% static 'lsmlogo.png' %}" alt="HTML tutorial" style="width:130px;height:130px;">
+    </div>
+      </a>
+    </header>
+    <form action="{% url 'applyjobs' %}" id="loginform" method="post">
+        <div class="imgcontainer">
+            <img src="{% static 'Login Image.png' %}" alt="Avatar" class="avatar">
+          </div>
+          {% csrf_token %}
+    <div class="container">
+        <label for="uname"><b>Email</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+    
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+            
+        <button class="button Submit">Submit</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+      </div>
+    
+      <div class="container" style="background-color:#f1f1f1">
+        <a href="{% url 'home' %}"><button class="button Cancel">Cancel</button></a>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>
+    </form>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Labor Supply Management System</title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'styles2.css' %}">
+        </head>
+    <header>
+        <h1>Labor Supply Management System</h1>
+        <a href="{% url 'home' %}">
+          <div class="Logo">
+          <img src="{% static 'lsmlogo.png' %}" alt="HTML tutorial" style="width:130px;height:130px;">
+        </div>
+          </a>
+        </header>
+        <form action="{% url 'saveregistrationform' %}" id="RegistrationForm" method="post">
+            <div class="container">
+              <!--<h1>Registration</h1>-->
+              <div class="imgcontainer">
+                <img src="{% static 'Registerimg.png' %}" alt="Avatar" class="avatar">
+              </div>
+              <p>Please fill in this form to create an account.</p>
+              <hr>
+              {% csrf_token %}
+              <label for="email"><b>Email</b></label>
+              <input type="text" placeholder="Enter Email" name="email" id="email" required>
+
+              <label for="mobile"><b>Mobile Number</b></label>
+              <input type="text" placeholder="Enter Mobile Number" name="MobNo" id="MobNo" required>
+
+              <label for="address"><b>Residential Address</b></label>
+              <input type="text" placeholder="Enter Current Address" name="ResAdd" id="ResAdd" required>
+
+              <label for="latitude"><b>Latitude</b></label>
+              <input type="text" id="latitude" name="latitude" placeholder="Latitude" readonly required>
+
+              <label for="longitude"><b>Longitude</b></label>
+              <input type="text" id="longitude" name="longitude" placeholder="Longitude" readonly required>
+          
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+          
+              <label for="psw-repeat"><b>Repeat Password</b></label>
+              <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+
+              <label for="skillsets"><b>Select Skillsets:</b>
+              </label>
+
+              <label class="checkbox">1)Harvesting
+                <input type="checkbox" aria-checked="false" id="myCheck" onclick="myFunction()">
+                <span class="checkmark"></span>
+              </label>
+              <label class="checkbox">2)Ploughing
+                <input type="checkbox" aria-checked="false">
+                <span class="checkmark"></span>
+              </label>
+              <label class="checkbox">3)Sowing
+                <input type="checkbox" aria-checked="false">
+                <span class="checkmark"></span>
+              </label>
+              <label class="checkbox">4)Manuring
+                <input type="checkbox" aria-checked="false">
+                <span class="checkmark"></span>
+              </label>
+              <label class="checkbox">5)Irrigation
+                <input type="checkbox" aria-checked="false">
+                <span class="checkmark"></span>
+              </label>
+              <label class="checkbox">6)Weeding
+                <input type="checkbox" aria-checked="false">
+                <span class="checkmark"></span>
+              </label>
+              <label class="checkbox">7)clerk
+                <input type="checkbox" aria-checked="false">
+                <span class="checkmark"></span>
+              </label>
+              <label class="checkbox">8)Warehouse-Loader
+                <input type="checkbox" aria-checked="false">
+                <span class="checkmark"></span>
+              </label>
+            
+              <hr>
+              
+            </script>
+
+              <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+              <button type="submit" class="registerbtn">Register</button>
+              <script>
+             
+              </script>
+            </div>
+           
+            <div class="container signin">
+              <p>Already have an account? <a href="{% url 'login' %}">Sign in</a>.</p>
+            </div>
+          </form>
+
+          <script src="{% static 'slideshow.js' %}"></script>
+        </html>

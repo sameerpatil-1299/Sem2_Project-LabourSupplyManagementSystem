@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name ="viewport"content="width=device-width,initial-scale=1.0">
+<title>Labor Supply Management System</title>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'styles2.css' %}">
+</head>
+<body>
+<header>
+<h1>Labor Supply Management System</h1>
+<a href="{% url 'home' %}">
+  <div class="Logo">
+  <img src="static/lsmlogo.png" alt="HTML tutorial" style="width:130px;height:130px;">
+</div>
+  </a>
+</header>
+<nav>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<section id="home">
+<h2>Welcome to LSM System</h2>
+<p>This platform connects farmers with available labor and facilitates efficient management of labor supply in farming communities.</p>
+</section>
+<!-- Images slideshow -->
+<div class="slideshow-container">
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="static/Farm img1.png.jpg" style="width:100%" height="350">
+    <div class="text">Caption Text</div>
+  </div>
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="static/Farm img2.png" style="width:100%">
+    <div class="text">Caption Two</div>
+  </div>
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="static/Farm img3.jpg" style="width:100%">
+    <div class="text">Caption Three</div>
+  </div>
+   <div> <script src="static/slideshow.js"></script></div>
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+
+<br>
+<section id="about">
+<h2>About Us</h2>
+<p>We aim to address the challenge of labor scarcity in rural farming areas and empower farmers and laborers to connect,collaborate and optimize labor utilization for increased productivity and profitability in agriculture.</p>
+</section>
+
+<section id="contact">
+<h2>Contact Us</h2>
+<p>Email: Sameer.Patil@lsm.com</p>
+</section>
+
+<a href="{% url 'register' %}"><button class="button Register">Register</button></a> 
+<a href="{% url 'login' %}"><button class="button Login">Login</button></a>
+</body>
+
+
+<footer>
+<p>&copy;2024 Labor Supply Management System.</p>
+</footer>
+
+</body>
+</html>
